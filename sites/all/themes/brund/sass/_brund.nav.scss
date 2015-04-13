@@ -1,0 +1,35 @@
+// **
+// Topbar menu
+// **
+nav {
+  .main-menu{
+    background-color: $theme-secondary-color;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 32px;
+  }
+
+  li{
+    float: left;
+    display: inline;
+  }
+
+  a {
+    color: $white;
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $light_blue;
+      text-decoration: none;
+    }
+
+    &.active-trail, &.active {
+      color: $white;
+      background-color: $light_blue;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "zen";
+
+%center-layout-container {
+  margin-right: auto;
+  margin-left: auto;
+
+  max-width: 960px;
+}
+
+.page {
+  $zen-column-count: 2 !global;
+
+  .content-wrapper {
+    @extend %center-layout-container;
+
+    .content-inner {
+      @include zen-grid-container;
+    }
+  }
+
+  @include medium-large() {
+    /**
+     * Two column layout left.
+     */
+    $zen-column-count: 4 !global;
+
+    .primary-content {
+      @include zen-grid-item(3, 2);
+    }
+
+    .secondary-content {
+      @include zen-grid-item(1, 1);
+    }
+  }
+
+  @include small() {
+    $zen-column-count: 1 !global;
+
+    .primary-content {
+      @include zen-grid-item(1, 1);
+      @include zen-clear();
+    }
+
+    .secondary-content {
+      @include zen-grid-item(1, 1);
+      @include zen-clear();
+    }
+
+    .tertiary-content {
+      @include zen-grid-item(1, 1);
+      @include zen-clear();
+    }
+  }
+}

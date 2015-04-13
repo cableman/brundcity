@@ -1,0 +1,17 @@
+name = Brund
+description = Brund homepage custom theme
+core = 7.x
+
+; Import stylesheets.
+stylesheets[all][] = css/brund.reset.css
+stylesheets[all][] = css/brund.style.css
+
+; Import JavaScripts.
+scripts[] = js/script.js
+
+; Regions
+regions[header] = Header
+regions[content] = Primary content
+regions[secondary_content] = Secondary content
+regions[footer] = Footer
+
