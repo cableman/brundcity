@@ -31,6 +31,11 @@
     .secondary-content {
       @include zen-grid-item(1, 1);
     }
+
+    .footer {
+      @include zen-clear();
+      @include zen-grid-item(4, 1);
+    }
   }
 
   @include small() {
@@ -46,7 +51,7 @@
       @include zen-clear();
     }
 
-    .tertiary-content {
+    .footer-content {
       @include zen-grid-item(1, 1);
       @include zen-clear();
     }

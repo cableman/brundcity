@@ -53,22 +53,31 @@ a {
   }
 
   .primary-content {
+    padding: 25px;
+
+    .title {
+      padding-bottom: 5px;
+      border-bottom: 1px solid #CCC;
+      margin: 0 0 16px;
+      line-height: 17pt;
+    }
+
     h1 {
-      @include rem('font-size', 18px);
+      font-size: 26px;
       font-weight: bold;
-      margin-top: 16px;
     }
 
     h2 {
-      @include rem('font-size', 16px);
+      font-size: 11pt;
       font-weight: bold;
-      margin-top: 14px;
+
+      margin: 16px 0 8px;
     }
 
     h3, h4, h5 {
-      @include rem('font-size', 14px);
       font-weight: bold;
-      margin-top: 12px;
+
+      margin-top: 10px;
     }
 
     p {
@@ -76,8 +85,29 @@ a {
     }
   }
 
-  .menu .expanded .menu {
-    margin-left: 8px;
+  .secondary-content {
+    background-color: $theme-teritary-color;
+    min-height: 425px;
+
+    .block-menu-block {
+      padding:  18px 15px 15px 8px;
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        display: inline-block;
+
+        a {
+          text-decoration: none;
+          padding: 7px 15px;
+          color: #333;
+        }
+      }
+    }
   }
 }
 
@@ -89,10 +119,11 @@ img {
 }
 
 footer {
-  @include rem('font-size', 12px);
-  text-align: center;
-  background: none repeat scroll 0 0 $theme-teritary-color;
-  padding: 4px;
-  z-index: 2;
-  margin-top: 18px;
+  min-height: 58px;
+  background-color: $theme-secondary-color;
+
+  .footer-content {
+    color: $white;
+    margin: 20px;
+  }
 }

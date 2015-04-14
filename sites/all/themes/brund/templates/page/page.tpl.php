@@ -61,17 +61,15 @@
         <?php print render($page['content']); ?>
       </div>
 
-      <?php if ($page['secondary_content']): ?>
-        <aside class="secondary-content">
-          <?php print render($page['secondary_content']); ?>
-        </aside>
-      <?php endif; ?>
+      <aside class="secondary-content">
+        <?php print render($page['secondary_content']); ?>
+      </aside>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <?php print render($page['footer']); ?>
+        </div>
+      </footer>
     </div> <!-- inner -->
   </div> <!-- content -->
-
-  <?php if (isset($page['footer'])): ?>
-    <footer>
-      <?php print render($page['footer']); ?>
-    </footer>
-  <?php endif; ?>
 </div>

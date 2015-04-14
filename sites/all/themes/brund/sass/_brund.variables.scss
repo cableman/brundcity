@@ -18,8 +18,7 @@ $light_blue:            #1E7B92 !default;
 //
 $theme-primary-color:             #FFF;
 $theme-secondary-color:           #17425A;
-$theme-teritary-color:            #62A140;
-
+$theme-teritary-color:            #F5F5F5;
 
 // -----------------------------------------------------------------------------
 // Font library
@@ -27,12 +26,11 @@ $theme-teritary-color:            #62A140;
 //
 $theme-icon-library-font:         FontAwesome;
 
-
 // -----------------------------------------------------------------------------
 // Typography
 // -----------------------------------------------------------------------------
 //
-$font-color-primary:    #000;
+$font-color-primary:      $theme-secondary-color;
 $font-color-link-primary: #62A140;
 
 // -----------------------------------------------------------------------------
@@ -43,7 +41,6 @@ $theme-font-size:                 12px;
 $theme-line-height:               16px;
 $theme-font-weight-normal:        normal;
 $theme-font-weight-bold:          normal;
-
 
 // -----------------------------------------------------------------------------
 // Base font size for rem() mixin, measured in pixels
