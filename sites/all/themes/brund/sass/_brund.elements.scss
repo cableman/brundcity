@@ -45,12 +45,15 @@ a {
 }
 
 .content-wrapper {
+
   .breadcrumb {
     @include rem('font-size', 14px);
     padding: 0;
     margin-bottom: 8px;
     border-bottom: 1px solid $grey;
   }
+
+  overflow: auto;
 
   .primary-content {
     padding: 25px;

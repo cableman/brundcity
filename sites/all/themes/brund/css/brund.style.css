@@ -1182,46 +1182,48 @@ a {
   a:hover {
     text-decoration: underline; }
 
-.content-wrapper .breadcrumb {
-  font-size: 14px;
-  font-size: 0.875rem;
-  padding: 0;
-  margin-bottom: 8px;
-  border-bottom: 1px solid #BBB; }
-.content-wrapper .primary-content {
-  padding: 25px; }
-  .content-wrapper .primary-content .title {
-    padding-bottom: 5px;
-    border-bottom: 1px solid #CCC;
-    margin: 0 0 16px;
-    line-height: 17pt; }
-  .content-wrapper .primary-content h1 {
-    font-size: 26px;
-    font-weight: bold; }
-  .content-wrapper .primary-content h2 {
-    font-size: 11pt;
-    font-weight: bold;
-    margin: 16px 0 8px; }
-  .content-wrapper .primary-content h3, .content-wrapper .primary-content h4, .content-wrapper .primary-content h5 {
-    font-weight: bold;
-    margin-top: 10px; }
-  .content-wrapper .primary-content p {
-    margin-bottom: 8px; }
-.content-wrapper .secondary-content {
-  background-color: #F5F5F5;
-  min-height: 425px; }
-  .content-wrapper .secondary-content .block-menu-block {
-    padding: 18px 15px 15px 8px; }
-    .content-wrapper .secondary-content .block-menu-block ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0; }
-    .content-wrapper .secondary-content .block-menu-block li {
-      display: inline-block; }
-      .content-wrapper .secondary-content .block-menu-block li a {
-        text-decoration: none;
-        padding: 7px 15px;
-        color: #333; }
+.content-wrapper {
+  overflow: auto; }
+  .content-wrapper .breadcrumb {
+    font-size: 14px;
+    font-size: 0.875rem;
+    padding: 0;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #BBB; }
+  .content-wrapper .primary-content {
+    padding: 25px; }
+    .content-wrapper .primary-content .title {
+      padding-bottom: 5px;
+      border-bottom: 1px solid #CCC;
+      margin: 0 0 16px;
+      line-height: 17pt; }
+    .content-wrapper .primary-content h1 {
+      font-size: 26px;
+      font-weight: bold; }
+    .content-wrapper .primary-content h2 {
+      font-size: 11pt;
+      font-weight: bold;
+      margin: 16px 0 8px; }
+    .content-wrapper .primary-content h3, .content-wrapper .primary-content h4, .content-wrapper .primary-content h5 {
+      font-weight: bold;
+      margin-top: 10px; }
+    .content-wrapper .primary-content p {
+      margin-bottom: 8px; }
+  .content-wrapper .secondary-content {
+    background-color: #F5F5F5;
+    min-height: 425px; }
+    .content-wrapper .secondary-content .block-menu-block {
+      padding: 18px 15px 15px 8px; }
+      .content-wrapper .secondary-content .block-menu-block ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0; }
+      .content-wrapper .secondary-content .block-menu-block li {
+        display: inline-block; }
+        .content-wrapper .secondary-content .block-menu-block li a {
+          text-decoration: none;
+          padding: 7px 15px;
+          color: #333; }
 
 img {
   display: inline;

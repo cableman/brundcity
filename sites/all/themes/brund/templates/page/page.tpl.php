@@ -30,13 +30,13 @@
         <?php endif; ?>
       </nav>
 
-      <?php if ($messages): ?>
-        <div id="messages">
-          <?php print $messages; ?>
-        </div>
-      <?php endif; ?>
-
       <div class="primary-content">
+        <?php if ($messages): ?>
+          <div id="messages">
+            <?php print $messages; ?>
+          </div>
+        <?php endif; ?>
+
         <a id="primary-content"></a>
         <?php print render($title_prefix); ?>
         <?php if ($title): ?>
@@ -61,9 +61,9 @@
         <?php print render($page['content']); ?>
       </div>
 
-      <aside class="secondary-content">
+      <div class="secondary-content">
         <?php print render($page['secondary_content']); ?>
-      </aside>
+      </div>
 
       <footer class="footer">
         <div class="footer-content">
