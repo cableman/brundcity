@@ -60,6 +60,7 @@ a {
   }
 
   .primary-content {
+    min-height: 425px;
     padding: 25px;
 
     .title {
@@ -95,9 +96,12 @@ a {
   .secondary-content {
     background-color: $theme-teritary-color;
 
-    position: absolute;
-    top: 32px;
-    bottom: 58px;
+    // Fix height for desktop.
+    @include medium-large() {
+      position: absolute;
+      top: $navigation-height;
+      bottom: $footer-height;
+    }
 
     .block-menu-block {
       padding:  18px 15px 15px 8px;
@@ -129,7 +133,7 @@ img {
 }
 
 footer {
-  min-height: 58px;
+  min-height: $footer-height;
   background-color: $theme-secondary-color;
 
   .footer-content {
