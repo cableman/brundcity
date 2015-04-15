@@ -1212,6 +1212,8 @@ a {
       margin-top: 10px; }
     .content-wrapper .primary-content p {
       margin-bottom: 8px; }
+    .content-wrapper .primary-content td {
+      vertical-align: top; }
   .content-wrapper .secondary-content {
     background-color: #F5F5F5; }
     @media only screen and (min-width: 481px) and (max-width: 768px) {
