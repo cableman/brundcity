@@ -55,6 +55,10 @@ a {
 
   overflow: auto;
 
+  .content-inner {
+    position: relative;
+  }
+
   .primary-content {
     padding: 25px;
 
@@ -90,7 +94,10 @@ a {
 
   .secondary-content {
     background-color: $theme-teritary-color;
-    min-height: 425px;
+
+    position: absolute;
+    top: 32px;
+    bottom: 58px;
 
     .block-menu-block {
       padding:  18px 15px 15px 8px;

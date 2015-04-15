@@ -1190,6 +1190,8 @@ a {
     padding: 0;
     margin-bottom: 8px;
     border-bottom: 1px solid #BBB; }
+  .content-wrapper .content-inner {
+    position: relative; }
   .content-wrapper .primary-content {
     padding: 25px; }
     .content-wrapper .primary-content .title {
@@ -1211,7 +1213,9 @@ a {
       margin-bottom: 8px; }
   .content-wrapper .secondary-content {
     background-color: #F5F5F5;
-    min-height: 425px; }
+    position: absolute;
+    top: 32px;
+    bottom: 58px; }
     .content-wrapper .secondary-content .block-menu-block {
       padding: 18px 15px 15px 8px; }
       .content-wrapper .secondary-content .block-menu-block ul {
