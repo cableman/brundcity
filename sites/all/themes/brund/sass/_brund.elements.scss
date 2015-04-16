@@ -96,6 +96,16 @@ a {
       vertical-align: top;
       padding: 0 8px;
     }
+
+    ol {
+      list-style-type: decimal;
+      padding: 0 32px 10px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding: 0 32px 10px;
+    }
   }
 
   .secondary-content {
@@ -106,26 +116,6 @@ a {
       position: absolute;
       top: $navigation-height;
       bottom: $footer-height;
-    }
-
-    .block-menu-block {
-      padding:  18px 15px 15px 8px;
-
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      li {
-        display: inline-block;
-
-        a {
-          text-decoration: none;
-          padding: 7px 15px;
-          color: #333;
-        }
-      }
     }
   }
 }
