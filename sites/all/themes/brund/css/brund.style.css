@@ -1240,6 +1240,21 @@ a {
     .content-wrapper .primary-content ul {
       list-style-type: disc;
       padding: 0 32px 10px; }
+    .content-wrapper .primary-content .webform-component-fieldset {
+      margin-bottom: 1em;
+      padding: 1em;
+      border: 1px solid #17425A; }
+      .content-wrapper .primary-content .webform-component-fieldset.webform--inline label {
+        float: left;
+        width: 12%;
+        text-align: right; }
+      .content-wrapper .primary-content .webform-component-fieldset label {
+        margin-right: 0.5em;
+        padding-top: 0.2em;
+        font-weight: bold; }
+      .content-wrapper .primary-content .webform-component-fieldset legend {
+        padding: 0.2em 0.5em;
+        text-decoration: underline; }
   .content-wrapper .secondary-content {
     background-color: #F5F5F5; }
     @media only screen and (min-width: 481px) and (max-width: 768px) {
@@ -1264,4 +1279,5 @@ footer {
   background-color: #17425A; }
   footer .footer-content {
     color: #fff;
-    margin: 20px; }
+    margin: 20px;
+    text-align: center; }

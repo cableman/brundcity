@@ -106,6 +106,32 @@ a {
       list-style-type: disc;
       padding: 0 32px 10px;
     }
+
+    .webform-component-fieldset {
+      margin-bottom: 1em;
+      padding: 1em;
+      border: 1px solid $font-color-primary;
+
+      &.webform--inline {
+       label {
+         float: left;
+         width: 12%;
+         text-align: right;
+       }
+      }
+
+      label {
+        margin-right: 0.5em;
+        padding-top: 0.2em;
+        font-weight: bold;
+      }
+
+      legend {
+        padding: 0.2em 0.5em;
+        text-decoration: underline;
+      }
+    }
+
   }
 
   .secondary-content {
@@ -134,5 +160,6 @@ footer {
   .footer-content {
     color: $white;
     margin: 20px;
+    text-align: center;
   }
 }
