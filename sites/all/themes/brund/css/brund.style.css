@@ -1255,6 +1255,11 @@ a {
       .content-wrapper .primary-content .webform-component-fieldset legend {
         padding: 0.2em 0.5em;
         text-decoration: underline; }
+  .content-wrapper .view-bookings h3 {
+    text-decoration: underline;
+    margin-bottom: 10px; }
+  .content-wrapper .view-bookings ul {
+    padding: 0 10px 10px; }
   .content-wrapper .secondary-content {
     background-color: #F5F5F5; }
     @media only screen and (min-width: 481px) and (max-width: 768px) {
