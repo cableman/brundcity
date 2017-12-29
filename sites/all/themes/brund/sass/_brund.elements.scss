@@ -55,7 +55,12 @@ a {
 
   overflow: auto;
 
+  .content-inner {
+    position: relative;
+  }
+
   .primary-content {
+    min-height: 425px;
     padding: 25px;
 
     .title {
@@ -86,30 +91,68 @@ a {
     p {
       margin-bottom: 8px;
     }
+
+    td {
+      vertical-align: top;
+      padding: 0 8px;
+    }
+
+    ol {
+      list-style-type: decimal;
+      padding: 0 32px 10px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding: 0 32px 10px;
+    }
+
+    .webform-component-fieldset {
+      margin-bottom: 1em;
+      padding: 1em;
+      border: 1px solid $font-color-primary;
+
+      &.webform--inline {
+       label {
+         float: left;
+         width: 12%;
+         text-align: right;
+       }
+      }
+
+      label {
+        margin-right: 0.5em;
+        padding-top: 0.2em;
+        font-weight: bold;
+      }
+
+      legend {
+        padding: 0.2em 0.5em;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .view-bookings {
+    h3 {
+      text-decoration: underline;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding: 0 10px 10px;
+    }
+
   }
 
   .secondary-content {
     background-color: $theme-teritary-color;
-    min-height: 425px;
 
-    .block-menu-block {
-      padding:  18px 15px 15px 8px;
-
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      li {
-        display: inline-block;
-
-        a {
-          text-decoration: none;
-          padding: 7px 15px;
-          color: #333;
-        }
-      }
+    // Fix height for desktop.
+    @include medium-large() {
+      position: absolute;
+      top: $navigation-height;
+      bottom: $footer-height;
     }
   }
 }
@@ -122,11 +165,12 @@ img {
 }
 
 footer {
-  min-height: 58px;
+  min-height: $footer-height;
   background-color: $theme-secondary-color;
 
   .footer-content {
     color: $white;
     margin: 20px;
+    text-align: center;
   }
 }

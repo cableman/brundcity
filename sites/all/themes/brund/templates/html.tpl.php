@@ -10,6 +10,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <meta name="google-site-verification" content="SesIBJMgYQxc1YQSsHU3aEwObVqxq4WFqNqqgTjOkJQ" />
     <?php print $head; ?>
     <title><?php print $head_title; ?></title>
     <?php print $styles; ?>
