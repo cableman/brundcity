@@ -106,6 +106,7 @@ features[variable][] = pathauto_node_booking_pattern
 features[variable][] = pathauto_node_page_pattern
 features[variable][] = pathauto_node_webform_pattern
 features[variable][] = pathauto_taxonomy_term_tags_pattern
+features[views_view][] = booking_administration
 features[views_view][] = bookings
 features[wysiwyg][] = full_html
 features_exclude[dependencies][ctools] = ctools

@@ -36,10 +36,11 @@ function brund_configuration_field_group_info() {
       'label' => 'Kontakt',
       'instance_settings' => array(
         'required_fields' => 1,
+        'id' => '',
         'classes' => 'group-contact field-group-fieldset',
         'description' => '',
       ),
-      'formatter' => 'collapsed',
+      'formatter' => 'collapsible',
     ),
   );
   $field_groups['group_contact|node|booking|form'] = $field_group;
