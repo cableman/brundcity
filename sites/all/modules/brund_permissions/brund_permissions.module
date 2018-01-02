@@ -1,0 +1,111 @@
+<?php
+
+/**
+ * @file Secure Permissions Data
+ * Module file for secure permissions in code.
+ */
+
+/**
+ * Define site roles in code.
+ *
+ * Create a secure_permissions_data module directory and place this function
+ * in secure_permissions_data.module.
+ *
+ * @return
+ *   An array defining all the roles for the site.
+ */
+function brund_permissions_secure_permissions_roles() {
+  return array(
+    'anonymous user',
+    'authenticated user',
+    'booking',
+    'editor',
+  );
+}
+
+/**
+ * Define site permissions in code.
+ *
+ * Create a secure_permissions_data module directory and place this function
+ * in secure_permissions_data.module.
+ *
+ * @param $role
+ *   The role for which the permissions are being requested.
+ *
+ * @return
+ *   An array defining all the permissions for the site.
+ */
+function brund_permissions_secure_permissions($role) {
+  $permissions = array(
+    'anonymous user' => array(
+      'access content',
+      'diff view changes',
+      'use text format filtered_html',
+    ),
+    'authenticated user' => array(
+      'access content',
+      'diff view changes',
+      'use text format filtered_html',
+      'use text format full_html',
+    ),
+    'booking' => array(
+      'access administration pages',
+      'access all webform results',
+      'access contextual links',
+      'access dashboard',
+      'access overlay',
+      'access own webform results',
+      'access own webform submissions',
+      'access toolbar',
+      'change own username',
+      'create booking content',
+      'customize shortcut links',
+      'delete any booking content',
+      'delete own booking content',
+      'edit all webform submissions',
+      'edit any booking content',
+      'edit own booking content',
+      'edit own webform submissions',
+      'opt-in or out of tracking',
+      'switch shortcut sets',
+      'view own unpublished content',
+      'view the administration theme',
+    ),
+    'editor' => array(
+      'access administration pages',
+      'access all webform results',
+      'access content overview',
+      'access contextual links',
+      'access dashboard',
+      'access overlay',
+      'access own webform results',
+      'access toolbar',
+      'administer menu',
+      'administer redirects',
+      'change own username',
+      'create page content',
+      'create url aliases',
+      'create webform content',
+      'customize shortcut links',
+      'delete any page content',
+      'delete own page content',
+      'delete revisions',
+      'edit any page content',
+      'edit any webform content',
+      'edit meta tags',
+      'edit own page content',
+      'edit own webform content',
+      'opt-in or out of tracking',
+      'revert revisions',
+      'show format tips',
+      'show more format tips link',
+      'switch shortcut sets',
+      'translate interface',
+      'view own unpublished content',
+      'view revisions',
+    ),
+  );
+  if (isset($permissions[$role])) {
+    return $permissions[$role];
+  }
+}
