@@ -1286,3 +1286,19 @@ footer {
     color: #fff;
     margin: 20px;
     text-align: center; }
+
+img {
+  -webkit-box-shadow: 2px 2px 4px 0 #aaa;
+  -moz-box-shadow: 2px 2px 4px 0 #aaa;
+  box-shadow: 2px 2px 4px 0 #aaa;
+}
+
+.field-name-field-photos .field-item {
+  float: left;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.field-name-field-photos .field-item:nth-child(3n+3) {
+  margin-right: 0;
+}

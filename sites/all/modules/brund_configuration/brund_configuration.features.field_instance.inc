@@ -629,7 +629,7 @@ function brund_configuration_field_default_field_instances() {
           'colorbox_gallery_custom' => '',
           'colorbox_image_style' => 'photo',
           'colorbox_multivalue_index' => NULL,
-          'colorbox_node_style' => 'medium',
+          'colorbox_node_style' => 'photo_list',
           'colorbox_node_style_first' => '',
         ),
         'type' => 'colorbox',
