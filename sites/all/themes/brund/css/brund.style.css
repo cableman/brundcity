@@ -1287,6 +1287,9 @@ footer {
     margin: 20px;
     text-align: center; }
 
+/*************************
+ * Hand made css.
+ *************************/
 img {
   -webkit-box-shadow: 2px 2px 4px 0 #aaa;
   -moz-box-shadow: 2px 2px 4px 0 #aaa;
@@ -1302,3 +1305,49 @@ img {
 .field-name-field-photos .field-item:nth-child(3n+3) {
   margin-right: 0;
 }
+
+.view-booking-administration caption {
+  font-size: 150%;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.view-booking-administration table {
+  border: 1px solid #000000;
+  text-align: left;
+  border-collapse: collapse;
+  margin-bottom: 14px;
+}
+
+.view-booking-administration .views-field-field-telefon {
+  width: 70px;
+  text-align: center;
+}
+
+.view-booking-administration .views-field-field-navn {
+  width: 100px;
+}
+
+.primary-content .view-booking-administration td, .view-booking-administration th {
+  border: 1px solid #000000;
+  padding: 3px 4px;
+}
+
+.view-booking-administration tr:nth-child(even) {
+  background: #D0E4F5;
+}
+
+.view-booking-administration thead {
+  background: #0B6FA4;
+  border-bottom: 1px solid #000000;
+}
+.view-booking-administration thead th {
+  color: #FFFFFF;
+  text-align: left;
+  border-left: 1px solid #000000;
+}
+
+.view-booking-administration thead th:first-child {
+  border-left: none;
+}
+
