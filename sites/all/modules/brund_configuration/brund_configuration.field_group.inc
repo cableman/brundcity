@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * brund_configuration.field_group.inc
@@ -20,8 +21,6 @@ function brund_configuration_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Kontakt',
-    'weight' => '5',
     'children' => array(
       0 => 'field_navn',
       1 => 'field_telefon',
@@ -31,17 +30,19 @@ function brund_configuration_field_group_info() {
       5 => 'field_by',
       6 => 'field_kommentar',
     ),
-    'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Kontakt',
+      'formatter' => 'collapsible',
       'instance_settings' => array(
-        'required_fields' => 1,
-        'id' => '',
         'classes' => 'group-contact field-group-fieldset',
         'description' => '',
+        'id' => '',
+        'required_fields' => 1,
       ),
-      'formatter' => 'collapsible',
+      'label' => 'Kontakt',
     ),
+    'format_type' => 'fieldset',
+    'label' => 'Kontakt',
+    'weight' => '5',
   );
   $field_groups['group_contact|node|booking|form'] = $field_group;
 

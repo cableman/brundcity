@@ -1,0 +1,17 @@
+{
+    "name": "cableman/brund_word_export",
+    "autoload": {
+        "psr-4": {
+            "Cableman\\BrundWordExport\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jesper Kristensen",
+            "email": "cableman@linuxdev.dk"
+        }
+    ],
+    "require": {
+        "phpoffice/phpword": "^0.18.2"
+    }
+}

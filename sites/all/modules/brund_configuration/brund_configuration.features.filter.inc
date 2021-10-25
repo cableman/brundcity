@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * brund_configuration.features.filter.inc

@@ -1,0 +1,57 @@
+<?php
+
+//header("Content-type: application/vnd.ms-word");
+//header("Content-Disposition: attachment; Filename=yourcoolwordfile.doc");
+
+use \PhpOffice\PhpWord\TemplateProcessor;
+
+/**
+ * Implements hook_menu().
+ */
+function brund_word_export_menu() {
+  $items = [];
+
+  $items['booking-administration/export/%'] = [
+    'title' => 'Export',
+    'description' => 'Export to word',
+    'page callback' => 'brund_word_export_generate',
+    'page arguments' => [2],
+    'access callback' => 'user_is_logged_in',
+  ];
+
+  return $items;
+}
+
+function brund_word_export_generate(int $nid) {
+
+  require_once 'vendor/autoload.php';
+
+  drupal_add_http_header('Content-Description', 'File Transfer');
+  drupal_add_http_header('Content-Disposition', 'attachment; filename="Leje af Brund Forsamlingshus.docx"');
+  drupal_add_http_header('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+  drupal_add_http_header('Content-Transfer-Encoding', 'binary');
+  drupal_add_http_header('Cache-Control', 'must-revalidate, post-check=0, pre-check=0');
+  drupal_add_http_header('Expires', '0');
+
+  $input = __DIR__ . "/template/input.docx";
+  $output = __DIR__ . "/template/output.docx";
+
+  $templateProcessor = new TemplateProcessor($input);
+
+  $node = node_load($nid);
+  $wrapper = entity_metadata_wrapper('node', $node);
+
+  $templateProcessor->setValue('navn', $wrapper->field_navn->value());
+  $templateProcessor->setValue('telefon', $wrapper->field_telefon->value());
+
+  $data = $wrapper->field_dato->value();
+  $date = DateTime::createFromFormat('Y-m-d H:i:s', $data['value'], new DateTimeZone($data['timezone']));
+  $templateProcessor->setValue('udlejedato', $date->format('d/m/y'));
+  $templateProcessor->saveAs($output);
+
+  $phpWord = \PhpOffice\PhpWord\IOFactory::load($output);
+  $xmlWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
+  $xmlWriter->save("php://output");
+
+  drupal_exit();
+}
