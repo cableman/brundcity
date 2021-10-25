@@ -1,0 +1,4 @@
+name = Brund Word Export
+description = Generate contract off the house.
+core = 7.x
+dependencies[] = entity
