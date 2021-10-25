@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * brund_configuration.views_default.inc
@@ -23,6 +24,7 @@ function brund_configuration_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Booking administration';
+  $handler->display->display_options['css_class'] = 'booking-admin-view';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
@@ -31,8 +33,8 @@ function brund_configuration_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
@@ -102,6 +104,13 @@ function brund_configuration_views_default_views() {
       'empty_column' => 0,
     ),
   );
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Field: Dato (year) */
   $handler->display->display_options['fields']['field_dato_1']['id'] = 'field_dato_1';
   $handler->display->display_options['fields']['field_dato_1']['table'] = 'field_data_field_dato';
@@ -156,12 +165,21 @@ function brund_configuration_views_default_views() {
   $handler->display->display_options['fields']['field_kommentar']['id'] = 'field_kommentar';
   $handler->display->display_options['fields']['field_kommentar']['table'] = 'field_data_field_kommentar';
   $handler->display->display_options['fields']['field_kommentar']['field'] = 'field_kommentar';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Field: Export link */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Export link';
+  $handler->display->display_options['fields']['nothing']['label'] = 'Export';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'export';
+  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['path'] = '/booking-administration/export/[nid]';
+  $handler->display->display_options['fields']['nothing']['alter']['link_class'] = 'export';
+  /* Sort criterion: Content: Dato -  start date (field_dato) */
+  $handler->display->display_options['sorts']['field_dato_value']['id'] = 'field_dato_value';
+  $handler->display->display_options['sorts']['field_dato_value']['table'] = 'field_data_field_dato';
+  $handler->display->display_options['sorts']['field_dato_value']['field'] = 'field_dato_value';
+  /* Filter criterion: Content: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -194,13 +212,6 @@ function brund_configuration_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
     t('Title'),
     t('Dato'),
     t('Navn'),
@@ -208,6 +219,8 @@ function brund_configuration_views_default_views() {
     t('<a href="mailto:[field_mail-value]">[field_mail]</a>'),
     t('Telefon'),
     t('Kommentar'),
+    t('Export'),
+    t('export'),
     t('Page'),
   );
   $export['booking_administration'] = $view;
@@ -288,7 +301,7 @@ function brund_configuration_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Edit link */
+  /* Field: Content: Link to edit content */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
@@ -301,7 +314,7 @@ function brund_configuration_views_default_views() {
   $handler->display->display_options['sorts']['field_dato_value']['id'] = 'field_dato_value';
   $handler->display->display_options['sorts']['field_dato_value']['table'] = 'field_data_field_dato';
   $handler->display->display_options['sorts']['field_dato_value']['field'] = 'field_dato_value';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Content: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';

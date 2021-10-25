@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * brund_configuration.features.field_instance.inc
@@ -142,6 +143,7 @@ function brund_configuration_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
+          'custom_date_format' => '',
           'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
