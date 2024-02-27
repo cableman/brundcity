@@ -1237,7 +1237,8 @@ a:hover {
 
 .content-wrapper .primary-content {
   min-height: 425px;
-  padding: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .content-wrapper .primary-content .title {
@@ -1322,13 +1323,30 @@ a:hover {
   .content-wrapper .secondary-content {
     position: absolute;
     top: 32px;
-    bottom: 58px; }
+    bottom: 58px;
+  }
+
+  .content-wrapper .primary-content {
+    margin-top: 25px;
+  }
 }
+
 @media only screen and (min-width: 769px) {
   .content-wrapper .secondary-content {
     position: absolute;
     top: 32px;
-    bottom: 58px; }
+    bottom: 58px;
+  }
+
+  .content-wrapper .primary-content {
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .content-wrapper .primary-content {
+    margin-top: 25px;
+  }
 }
 
 img {
