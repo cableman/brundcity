@@ -24,7 +24,6 @@ services:
       - memcached
     volumes:
       - .:/app
-      - drush-cache:/root/.drush
 
   nginx:
     image: nginxinc/nginx-unprivileged:alpine
@@ -62,12 +61,9 @@ services:
     image: itkdev/drush6:latest
     networks:
       - app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     entrypoint:
       - drush
     volumes:
-      - drush-cache:/root/.drush
       - ./:/app
-
-# Drush cache volume to persist cache between runs.
-volumes:
-  drush-cache:
