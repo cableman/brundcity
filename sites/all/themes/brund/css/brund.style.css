@@ -1140,28 +1140,6 @@ ul.icons li [class*=" icon-"] {
     clear: left; }
 }
 
-nav .main-menu {
-  background-color: #17425a;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  height: 32px; }
-nav li {
-  float: left;
-  display: inline; }
-nav a {
-  color: #fff;
-  display: inline-block;
-  padding: 8px 16px;
-  text-decoration: none; }
-nav a:hover {
-  background-color: #1e7b92;
-  text-decoration: none; }
-nav a.active-trail, nav a.active {
-  color: #fff;
-  background-color: #1e7b92; }
-
 .secondary-content .block-menu-block {
   padding: 18px 15px 15px 8px; }
 .secondary-content .block-menu-block ul {
@@ -1352,6 +1330,7 @@ img {
 footer {
   min-height: 58px;
   background-color: #17425a;
+  clear: both;
 }
 
 footer .footer-content {
@@ -1445,7 +1424,7 @@ img {
   color: #fff;
   background: -webkit-gradient(linear, left top, left bottom, from(#8ba0ac), to(#17425a)));
   background: -moz-linear-gradient(top, #8ba0ac, #17425a));
-  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#8ba0ac', endColorstr='#17425a')
+  filter: hamprogid: DXImageTransform.Microsoft.gradient(startColorstr='#8ba0ac', endColorstr='#17425a')
 }
 
 a.button {
@@ -1454,6 +1433,101 @@ a.button {
 
 @media only screen and (max-width: 480px) {
   .content-wrapper .primary-content {
-    margin-top: 50px;
+    margin-top: 25px;
   }
+}
+
+nav a {
+  color: #fff;
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #1e7b92;
+  text-decoration: none;
+}
+
+nav a.active-trail, nav a.active {
+  color: #fff;
+  background-color: #1e7b92;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #17425a;
+  min-height: 32px;
+
+  width: 100%;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  flex-grow: 1;
+}
+
+nav ul {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav-container, nav ul {
+  display: flex;
+}
+
+.hamburger-menu {
+  display: none; /* Hidden by default for larger screens */
+  cursor: pointer;
+  color: white;
+  margin-left: 10px;
+}
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: .6rem;
+  }
+
+  .hamburger-menu {
+    display: block;
+    z-index: 2;
+    font-size: 200%
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+
+    padding-top: 6rem;
+
+    align-items: center;
+    text-align: center;
+    background-color: #4D4DDB;
+    color: white;
+
+    transition: 0.15s ease-in-out;
+  }
+
+   nav.active {
+    right: 0;
+  }
+
+  nav li.active-trail, nav li.active {
+    color: #fff;
+    background-color: #1e7b92;
+  }
+
 }

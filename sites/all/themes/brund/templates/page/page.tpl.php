@@ -15,21 +15,22 @@
   <div class="content-wrapper">
     <div class="content-inner">
       <!-- Navigation -->
-      <nav>
-        <!-- Mobil navigation icons -->
-        <!--      <ul class="topbar-menu">-->
-        <!--        <li class="last js-topbar-link">-->
-        <!--          <a class="menu-item js-menu" title="" href="#">-->
-        <!--            <i class="icon-align-justify"></i>-->
-        <!--          </a>-->
-        <!--        </li>-->
-        <!--      </ul>-->
+      <div class="nav-container">
+        <nav>
+          <?php if (isset($main_menu)): ?>
+            <?php
+              print theme('links__system_main_menu', array(
+                'links' => $main_menu,
+                'attributes' => array(
+                  'class' => array('main-menu')
+                )
+              )); ?>
+          <?php endif; ?>
+        </nav>
+        <span class="hamburger-menu  material-symbols-outlined"><i class="icon-reorder"></i></span>
+      </div>
 
-        <?php if (isset($main_menu)): ?>
-          <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('main-menu')))); ?>
-        <?php endif; ?>
-      </nav>
-
+      <!-- Content -->
       <div class="primary-content">
         <?php if ($messages): ?>
           <div id="messages">

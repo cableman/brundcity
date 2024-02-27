@@ -23,5 +23,13 @@
     <?php print $page_top; ?>
     <?php print $page; ?>
     <?php print $page_bottom; ?>
+    <script>
+      const hamburgerMenu = document.querySelector(".hamburger-menu");
+      const nav = document.querySelector("nav");
+
+      hamburgerMenu.addEventListener("click", () => {
+        nav.classList.toggle("active")
+      });
+    </script>
   </body>
 </html>
