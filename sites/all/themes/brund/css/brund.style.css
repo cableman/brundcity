@@ -1487,7 +1487,15 @@ nav ul {
   margin-left: 10px;
 }
 
+table td.prislist {
+  width: 75%;
+}
+
 @media (max-width: 700px) {
+  table td.prislist {
+    width: 70%;
+  }
+
   nav {
     flex-direction: column;
     gap: 2rem;
