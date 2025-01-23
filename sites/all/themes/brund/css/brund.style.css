@@ -43,7 +43,7 @@
   line-height: normal;
   vertical-align: baseline;
   background-image: none;
-  background-position: 0% 0%;
+  background-position: 0 0;
   background-repeat: repeat;
   margin-top: 0; }
 
@@ -1032,7 +1032,7 @@ ul.icons li [class*=" icon-"] {
   .page .secondary-content {
     float: left;
     width: 25%;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: -25%;
     padding-left: 10px;
     padding-right: 10px;
@@ -1045,7 +1045,7 @@ ul.icons li [class*=" icon-"] {
     clear: left;
     float: left;
     width: 100%;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: -100%;
     padding-left: 10px;
     padding-right: 10px;
@@ -1075,7 +1075,7 @@ ul.icons li [class*=" icon-"] {
   .page .secondary-content {
     float: left;
     width: 25%;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: -25%;
     padding-left: 10px;
     padding-right: 10px;
@@ -1088,7 +1088,7 @@ ul.icons li [class*=" icon-"] {
     clear: left;
     float: left;
     width: 100%;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: -100%;
     padding-left: 10px;
     padding-right: 10px;
@@ -1102,7 +1102,7 @@ ul.icons li [class*=" icon-"] {
   .page .primary-content {
     float: left;
     width: 100%;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: -100%;
     padding-left: 10px;
     padding-right: 10px;
@@ -1115,7 +1115,7 @@ ul.icons li [class*=" icon-"] {
   .page .secondary-content {
     float: left;
     width: 100%;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: -100%;
     padding-left: 10px;
     padding-right: 10px;
@@ -1128,7 +1128,7 @@ ul.icons li [class*=" icon-"] {
   .page .footer-content {
     float: left;
     width: 100%;
-    margin-left: 0%;
+    margin-left: 0;
     margin-right: -100%;
     padding-left: 10px;
     padding-right: 10px;
@@ -1415,15 +1415,15 @@ img {
   color: #ecece9;
   padding: 6px 12px;
   background: -webkit-gradient(linear, left top, left bottom, from(#8ba0ac), to(#17425a));
-  background: -moz-linear-gradient(top, #8ba0ac, #17425a));
+  background: -moz-linear-gradient(top, #8ba0ac, #17425a);
   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#54afec', endColorstr='#106197')
 }
 
 .button:hover {
   background: #1e7b92;
   color: #fff;
-  background: -webkit-gradient(linear, left top, left bottom, from(#8ba0ac), to(#17425a)));
-  background: -moz-linear-gradient(top, #8ba0ac, #17425a));
+  background: -webkit-gradient(linear, left top, left bottom, from(#8ba0ac), to(#17425a));
+  background: -moz-linear-gradient(top, #8ba0ac, #17425a);
   filter: hamprogid: DXImageTransform.Microsoft.gradient(startColorstr='#8ba0ac', endColorstr='#17425a')
 }
 
