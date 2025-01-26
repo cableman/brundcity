@@ -1161,7 +1161,7 @@ ul.icons li [class*=" icon-"] {
 
 body {
   font-family: Arial, Helvetica, Sans-Serif;
-  font-size: 12px;
+  font-size: 14px;
   background-color: #fff;
   color: #17425a;
   line-height: 16px; }
@@ -1489,6 +1489,53 @@ nav ul {
 
 table td.prislist {
   width: 75%;
+}
+
+
+/****
+ * Arrangement
+ ****/
+
+.node-arrangement {
+  margin-bottom: 1em;
+}
+
+.node-arrangement p {
+  line-height: 1.4em;
+}
+
+.node-arrangement table {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.node-arrangement table tr, .node-arrangement table td {
+  border: 1px solid #d9d9d9;
+}
+
+.content-wrapper .primary-content .node-arrangement table td {
+  padding: 4px !important;
+}
+
+.view-id-events .view-content .views-field-title {
+  float: left;
+  width: 67%;
+  clear: both;
+  padding-bottom: 10px;
+  font-size: 120%;
+}
+
+.view-id-events .view-content .views-field-field-date {
+  float: left;
+  width: 67%;
+  clear: both;
+  padding-bottom: 1em;
+}
+
+.view-id-events .view-content .views-field-body {
+  float: left;
+  width: 67%;
+  clear: both;
 }
 
 @media (max-width: 700px) {

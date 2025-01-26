@@ -69,6 +69,14 @@ function brund_configuration_image_default_styles() {
  */
 function brund_configuration_node_info() {
   $items = array(
+    'arrangement' => array(
+      'name' => t('Arrangement'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'booking' => array(
       'name' => t('Booking'),
       'base' => 'node_content',
