@@ -28,7 +28,7 @@ function brund_configuration_views_default_views() {
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
-    2 => '2',
+    3 => '3',
   );
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -203,6 +203,76 @@ function brund_configuration_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Data export */
+  $handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['style_options']['provide_file'] = 1;
+  $handler->display->display_options['style_options']['filename'] = 'booking_administration.csv';
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['style_options']['quote'] = 1;
+  $handler->display->display_options['style_options']['trim'] = 0;
+  $handler->display->display_options['style_options']['replace_newlines'] = 0;
+  $handler->display->display_options['style_options']['newline_token'] = '1';
+  $handler->display->display_options['style_options']['header'] = 1;
+  $handler->display->display_options['style_options']['keep_html'] = 0;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Dato */
+  $handler->display->display_options['fields']['field_dato']['id'] = 'field_dato';
+  $handler->display->display_options['fields']['field_dato']['table'] = 'field_data_field_dato';
+  $handler->display->display_options['fields']['field_dato']['field'] = 'field_dato';
+  $handler->display->display_options['fields']['field_dato']['settings'] = array(
+    'format_type' => 'long',
+    'custom_date_format' => 'd/m/y',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  /* Field: Content: Navn */
+  $handler->display->display_options['fields']['field_navn']['id'] = 'field_navn';
+  $handler->display->display_options['fields']['field_navn']['table'] = 'field_data_field_navn';
+  $handler->display->display_options['fields']['field_navn']['field'] = 'field_navn';
+  /* Field: Content: Mail */
+  $handler->display->display_options['fields']['field_mail']['id'] = 'field_mail';
+  $handler->display->display_options['fields']['field_mail']['table'] = 'field_data_field_mail';
+  $handler->display->display_options['fields']['field_mail']['field'] = 'field_mail';
+  $handler->display->display_options['fields']['field_mail']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_mail']['alter']['text'] = '<a href="mailto:[field_mail-value]">[field_mail]</a>';
+  /* Field: Content: Telefon */
+  $handler->display->display_options['fields']['field_telefon']['id'] = 'field_telefon';
+  $handler->display->display_options['fields']['field_telefon']['table'] = 'field_data_field_telefon';
+  $handler->display->display_options['fields']['field_telefon']['field'] = 'field_telefon';
+  /* Field: Content: Adress */
+  $handler->display->display_options['fields']['field_adress']['id'] = 'field_adress';
+  $handler->display->display_options['fields']['field_adress']['table'] = 'field_data_field_adress';
+  $handler->display->display_options['fields']['field_adress']['field'] = 'field_adress';
+  /* Field: Content: Post nr. */
+  $handler->display->display_options['fields']['field_post_nr_']['id'] = 'field_post_nr_';
+  $handler->display->display_options['fields']['field_post_nr_']['table'] = 'field_data_field_post_nr_';
+  $handler->display->display_options['fields']['field_post_nr_']['field'] = 'field_post_nr_';
+  /* Field: Content: By */
+  $handler->display->display_options['fields']['field_by']['id'] = 'field_by';
+  $handler->display->display_options['fields']['field_by']['table'] = 'field_data_field_by';
+  $handler->display->display_options['fields']['field_by']['field'] = 'field_by';
+  /* Field: Content: Kommentar */
+  $handler->display->display_options['fields']['field_kommentar']['id'] = 'field_kommentar';
+  $handler->display->display_options['fields']['field_kommentar']['table'] = 'field_data_field_kommentar';
+  $handler->display->display_options['fields']['field_kommentar']['field'] = 'field_kommentar';
+  $handler->display->display_options['path'] = 'bookingexport';
   $translatables['booking_administration'] = array(
     t('Master'),
     t('Booking administration'),
@@ -222,6 +292,11 @@ function brund_configuration_views_default_views() {
     t('Export'),
     t('export'),
     t('Page'),
+    t('Data export'),
+    t('Nid'),
+    t('Adress'),
+    t('Post nr.'),
+    t('By'),
   );
   $export['booking_administration'] = $view;
 
